@@ -1,7 +1,7 @@
 
 require "public"
 local t = require "540"
-require "init"
+require "init";
 
 
 
