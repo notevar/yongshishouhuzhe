@@ -1,6 +1,6 @@
 
-require "public"
-local t = require "540"
+require "public";
+local t = require "540";
 require "init";
 
 
