@@ -1,0 +1,185 @@
+{
+   "style" : "default",
+   "config" : "save_111.dat",
+   "width" : 1280,
+   "height" : 1080,
+   "cancelname" : "退出",
+   "okname" : "开始",
+   "cancelscroll" : true,
+   "countdown" : 999,
+   "views" : [
+      {
+         "text" : "刷图设置",
+         "type" : "Page",
+         "views" : [
+            {
+               "align" : "left",
+               "color" : "255,3,3",
+               "size" : 22,
+               "text" : "提示：多角色切换请在角色列表开启脚本",
+               "type" : "Label"
+            },
+			{
+               "height" : 80,
+               "width" : 1280,
+               "id" : "group1",
+               "type" : "LinearLayout", //这是LinearLayout控件
+               "valign" : "top",
+               "views" : [
+                  {
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "size" : "22",
+                     "text" : "选择角色",
+                     "type" : "Label",
+                     "width" : 250
+                  },
+                  {
+                     "id" : "juesexuanze",
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "size" : "25",
+                     "text" : "",
+                     "type" : "Edit",
+                     "width" : 720
+                  }
+               ]
+            },
+            {
+               "height" : 130,
+               "width" : 1280,
+               "id" : "group2",
+               "type" : "LinearLayout",
+               "valign" : "center",
+               "views" : [
+                  {
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "size" : "22",
+                     "text" : "选择地图",
+                     "type" : "Label",
+                     "width" : 250
+                  },
+                  {
+                     "id" : "guankaditu",
+                     "list" : "魅影遗迹(20-23),矿脉外围(21-24),失落的大陆(22-25),龙族兵团(23-26),幽暗监狱(24-27),玩具的复仇(25-27),罪恶之地(26-29),天空之海(27-30),元素回廊(28-30),冰火极地(28-31),光之宫殿(29-32),幽暗影牢(30-33),诡变之森(30-35),安息之地(30-35),遗迹研究所(32-35),祖灵部落(32-34),雪山试炼(32-34),冰雪猛兽(33-35),冰霜宫殿(34-36),女王史卡姬(35-37),背后之地(36-38),山脊之路(37-39),秘密基地(39-41),邪恶洞窟(41-43),育母基地(43-45),魔炎之地(45-47),邪龙深渊(46-48),迷雾峡谷(47-49),亡灵要塞(48-50),瘟疫之村(49-51),厄运之地(51-53)",
+                     "select" : "0",
+                     "size" : "22",
+                     "type" : "ComboBox",
+                     "width" : 720
+                  }
+               ]
+            },
+            {
+               "height" : 80,
+               "width" : 1280,
+               "id" : "group1",
+               "type" : "LinearLayout", //这是LinearLayout控件
+               "valign" : "top",
+               "views" : [
+                  {
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "size" : "22",
+                     "text" : "选择难度",
+                     "type" : "Label",
+                     "width" : 250
+                  },
+                  //从这里开始是LinearLayout控件内部的子控件，不可嵌套LinearLayout控件，可添加LinearLayout、Page以外的所有控件
+                  {
+                     "id" : "shuatunandu",
+                     "list" : "普通    ,冒险    ,勇士    ,王者    ",
+                     "select" : "3",
+                     "size" : "22",
+                     "type" : "RadioGroup",
+                     "color" : "0,0,225",
+                     "width" : 960
+                  }
+               ]
+            },
+            {
+               "height" : 80,
+               "width" : 1280,
+               "id" : "group1",
+               "type" : "LinearLayout", //这是LinearLayout控件
+               "valign" : "top",
+               "views" : [
+                  {
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "size" : "22",
+                     "text" : "通关奖励",
+                     "type" : "Label",
+                     "width" : 250
+                  },
+                  //从这里开始是LinearLayout控件内部的子控件，不可嵌套LinearLayout控件，可添加LinearLayout、Page以外的所有控件
+                  {
+                     "id" : "tongguanjiangli",
+                     "list" : "1,2,3,4,随机",
+                     "select" : "0",
+                     "size" : "22",
+                     "type" : "RadioGroup",
+                     "color" : "0,0,225",
+                     "width" : 960
+                  }
+               ]
+            },
+            {
+               "height" : 80,
+               "width" : 1280,
+               "id" : "group1",
+               "type" : "LinearLayout", //这是LinearLayout控件
+               "valign" : "top",
+               "views" : [
+                  {
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "size" : "22",
+                     "text" : "黄金卡牌",
+                     "type" : "Label",
+                     "width" : 250
+                  },
+                  //从这里开始是LinearLayout控件内部的子控件，不可嵌套LinearLayout控件，可添加LinearLayout、Page以外的所有控件
+                  {
+                     "id" : "huangjinkapai",
+                     "list" : "1,2,3,4,随机,不选",
+                     "select" : "0",
+                     "size" : "22",
+                     "type" : "RadioGroup",
+                     "color" : "0,0,225",
+                     "width" : 960
+                  }
+               ]
+            },
+            {
+               "height" : 80,
+               "width" : 1280,
+               "id" : "group1",
+               "type" : "LinearLayout", //这是LinearLayout控件
+               "valign" : "top",
+               "views" : [
+                  {
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "size" : "22",
+                     "text" : "休息时间/秒",
+                     "type" : "Label",
+                     "width" : 250
+                  },
+                  {
+                     "id" : "sleeptime",
+                     "align" : "left",
+                     "color" : "0,0,0",
+                     "kbtype" : "number",
+                     "prompt" : "休息时间/秒",
+                     "size" : "25",
+                     "text" : "5",
+                     "type" : "Edit",
+                     "width" : 720
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

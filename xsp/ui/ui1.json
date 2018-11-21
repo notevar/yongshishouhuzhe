@@ -1,0 +1,95 @@
+{
+   "style" : "custom",
+   "config" : "save_阴阳师-全辅助-日常四件套.dat",
+   "width" : 1200,
+   "height" : 900,
+   "bg" : "bg2.png",
+   "cancelname" : "取消",
+   "okname" : "确定",
+   "views" : [
+      {
+         "id" : "101",
+         "list" : "御    魂：",
+         "select" : "0",
+         "size" : "40",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal",
+         "rect" : "230,180,500,70"
+      },
+      {
+         "id" : "102",
+         "list" : "觉    醒：",
+         "select" : "0",
+         "size" : "40",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal",
+         "rect" : "230,265,500,70"
+      },
+      {
+         "id" : "103",
+         "list" : "结界突破：",
+         "select" : "0",
+         "size" : "40",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal",
+         "rect" : "230,350,500,70"
+      },
+      {
+         "id" : "104",
+         "list" : "探    索：",
+         "select" : "0",
+         "size" : "40",
+         "type" : "CheckBoxGroup",
+         "orientation" : "horizontal",
+         "rect" : "230,435,500,70"
+      },
+      {
+         "id" : "201",
+         "list" : "壹  层,贰  层,叁  层,肆  层,伍  层,陆  层,柒  层,捌  层,玖  层,拾  层",
+         "select" : "0",
+         "size" : "30",
+         "type" : "ComboBox",
+         "rect" : "570,180,300,72"
+      },
+      {
+         "id" : "202",
+         "list" : "壹  层,贰  层,叁  层,肆  层,伍  层,陆  层,柒  层,捌  层,玖  层,拾  层",
+         "select" : "0",
+         "size" : "30",
+         "type" : "ComboBox",
+         "rect" : "570,265,300,72"
+      },
+      {
+         "id" : "203",
+         "list" : "个人突破,寮突破",
+         "select" : "1",
+         "size" : "30",
+         "type" : "ComboBox",
+         "rect" : "570,350,300,72"
+      },
+      {
+         "id" : "204",
+         "list" : "---困难---,第一章,第二章,第三章,第四章,第五章,第六章,第七章,第八章,第九章,第十章,第十一章,第十二章,第十三章,第十四章,第十五章,第十六章,第十七章,第十八章,第十九章,第二十章,第二十一章,第二十二章,---普通---,第一章,第二章,第三章,第四章,第五章,第六章,第七章,第八章,第九章,第十章,第十一章,第十二章,第十三章,第十四章,第十五章,第十六章,第十七章,第十八章,第十九章,第二十章,第二十一章,第二十二章",
+         "select" : "10",
+         "size" : "30",
+         "type" : "ComboBox",
+         "rect" : "570,435,300,72"
+      },
+      {
+         "align" : "left",
+         "size" : "28",
+         "text" : "*以上副本皆进行3次。",
+         "type" : "Label",
+         "rect" : "320,540,400,50"
+      },
+      {
+         "align" : "center",
+         "color" : "174, 143, 0",
+         "size" : "60",
+         "text" : "日常任务",
+         "type" : "Label",
+         "rect" : "400,80,400,80"
+      }
+   ]
+}
+xc
