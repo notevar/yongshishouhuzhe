@@ -135,8 +135,6 @@ function cmpColorEx(array,s)
 	s = math.floor(0xff*(100-s)*0.01)
 	for var = 1, #array do
 		local lr,lg,lb = getColorRGB(array[var][1],array[var][2])
-		
-		
 		local rgb = array[var][3]
 		
 		local r = math.floor(rgb/0x10000)
@@ -154,7 +152,7 @@ function tap(x, y)
 	local index = math.random(1,5)
 	touchDown(index,x, y)
 	showHUD(clickId,"",1,"0xffFF0000","click.png",0,x,y,48,48)
-	mSleep(150)                                --某些情况可能要增大延迟
+	mSleep(250)                                --某些情况可能要增大延迟
 	touchUp(index, x, y)
 	hideHUD(clickId);
 	mSleep(100)
@@ -178,7 +176,7 @@ function huds(text,size,color)
 	end
 	color = color or "0xffff0000";
 	showHUD(id,text,size,color,"",0,200,0,300,32)      --显示HUD内容
-	mSleep(150)
+	mSleep(250)
 end
 
 function hideHuds()

@@ -1,10 +1,6 @@
 ui = require "Gui"
-init("0",1)
-local h,w = getScreenSize() --w < h
-
-
 --主ui界面
-ui:new(w,h)
+ui:new(width,heigth)
 local p = ui:newPage("功能设置") --另一个页面
 
 p:newLine()
@@ -14,7 +10,7 @@ p:addLebel(8,1.2,"使用前 请开启自动战斗功能;多角色切换刷图请
 p:newLine()
 p:addLebel(0.2,1.1,"") 
 p:addLebel(2,1.1,"功能选择:") 
-p:addCheckBoxGroup(6,1.1,"gongnengxuanze","1@2","每日地下城","自动刷图") 
+p:addCheckBoxGroup(6,1.1,"gongnengxuanze","1@2@3","自动刷图","斗牛","哥布林") 
 
 p:newLine()
 p:addLebel(0.2,1.1,"") 

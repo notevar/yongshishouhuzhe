@@ -75,7 +75,7 @@ t["角色列表"]={
 			"0|0|0x64665e,0|2|0x65665e",
 			80, 0, 0, 0)--边框
 		if x > -1 and x1>-1 and x2 >-1 then
-			sysLog("")
+			sysLog("isUserList")
 			return true;
 		else
 			return false;
@@ -150,6 +150,14 @@ t["地图"]={
 		else
 			return false;
 		end
+	end,
+	toUpsMap=function()
+		mSleep(200);
+		--swip()
+	end,
+	toDownMap=function()
+		mSleep(200);
+		--swip()
 	end,
 	closeMap =function()
 		tap(1095,41);
@@ -266,6 +274,20 @@ t["刷图"]={
 		end
 		return false;
 	end,
+	selectPrize=function()
+		if(index2<=4) then
+			tap(t["选择卡牌奖励2"][index2][1],t["选择卡牌奖励2"][index2][2])
+		end
+		mSleep(500)
+		tap(t["选择卡牌奖励1"][index1][1],t["选择卡牌奖励1"][index1][2])
+		
+		while t["刷图"].isSelectPrize() do
+			mSleep(500);
+			tap(556,594);
+		end
+		mSleep(1000)
+		tap(1021,34);
+	end,
 	selectPrizeFast=function()
 		--sysLog("selectPrizeFast")
 		if(index2<=4) then
@@ -309,6 +331,23 @@ t["每日地下城"]={
 		if x > -1 then
 			--sysLog("1123123123")
 			return true;
+		end
+		return false;
+	end,
+	changeDXC=function()
+		tap(99,116);
+		mSleep(300);
+		tap(470,88);--切换每日地下城
+		mSleep(300);
+	end,
+	isComplate=function()--斗牛节和哥布林宝藏是否完成
+		x, y = findColor({587, 356, 826, 492}, 
+			"0|0|0x00d70a",
+			95, 0, 0, 0)
+		if x > -1 then
+			huds("战斗完成")
+			tap(559,594);
+			return;
 		end
 		return false;
 	end,
