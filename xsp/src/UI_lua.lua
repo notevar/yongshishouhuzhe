@@ -1,6 +1,6 @@
 ui = require "Gui"
 --主ui界面
-ui:new(width,heigth)
+ui:new(height,width)
 local p = ui:newPage("功能设置") --另一个页面
 
 p:newLine()
