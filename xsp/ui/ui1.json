@@ -1,27 +1,348 @@
 {
-   "style" : "custom",
-   "config" : "阴阳师全辅助.dat",
-   "width" : 1200,
-   "height" : 900,
-   "bg" : "bg.jpg",
-   "cancelname" : "取消",
-   "okname" : "确定",
+   "style" : "default",
+   "config" : "勇士守护者111.dat",
+   "width" : 1280,
+   "height" : 1080,
+   "cancelname" : "退出",
+   "okname" : "开始",
+   "cancelscroll" : true,
+   "countdown" : 999,
    "views" : [
       {
-         "text" : "设置页1",
-         "style" : "custom",
-         "type" : "Page",
          "views" : [
             {
-               "id" : "1101",
+               "type" : "Label",
+               "rect" : "12,18,20,28",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,64,20,52",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,64,204,52",
+               "align" : "left",
+               "text" : "功能选择:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "CheckBoxGroup",
+               "rect" : "260,64,613,52",
+               "list" : "自动刷图,斗牛,哥布林",
+               "id" : "gongnengxuanze",
+               "size" : 21,
+               "select" : "1@2@3",
+               "width" : 640
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,134,20,52",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,134,204,52",
+               "align" : "left",
+               "text" : "哥布林难度:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
                "type" : "RadioGroup",
-               "list" : "探索副本,御魂觉醒,结界突破,妖气封印,轻辅助,斗技,日常任务,刷赞,御灵,组队探索·队长,组队探索·队员,石距,业原火,兔子舞天团",
+               "rect" : "260,134,408,52",
+               "list" : "普通  ,冒险  ,勇士  ",
+               "id" : "gebulinnandu",
+               "size" : 24,
+               "select" : "0",
+               "width" : 640
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,204,20,62",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,204,204,62",
+               "align" : "left",
+               "text" : "自动复活:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "RadioGroup",
+               "rect" : "260,204,408,62",
+               "list" : "关闭  ,开启  ",
+               "id" : "zidongfuhuo",
+               "size" : 24,
+               "select" : "0",
+               "width" : 640
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,284,20,72",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,284,204,72",
+               "align" : "left",
+               "text" : "选择角色:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "CheckBoxGroup",
+               "rect" : "260,284,715,72",
+               "list" : "1,2,3,4,5,6,7,8",
+               "id" : "juesexuanze",
+               "size" : 21,
                "select" : "1",
-               "size" : "50",
-               "rect" : "120,150,600,1450",
-               "orientation" : "vertical"
+               "width" : 640
             }
-         ]
+         ],
+         "type" : "Page",
+         "style" : "custom",
+         "pr_h" : 72,
+         "pr_y" : 284,
+         "text" : "功能设置",
+         "init_y" : 284,
+         "pr_x" : 975
+      },
+      {
+         "views" : [
+            {
+               "type" : "Label",
+               "rect" : "12,18,20,72",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,18,204,72",
+               "align" : "left",
+               "text" : "刷图位置:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "ComboBox",
+               "rect" : "260,18,357,58",
+               "list" : "幽寒林地(13-16),魅影遗迹(20-23),矿脉外围(21-24),失落的大陆(22-25),龙族兵团(23-26),幽暗监狱(24-27),玩具的复仇(25-27),罪恶之地(26-29),天空之海(27-30),元素回廊(28-30),冰火极地(28-31),光之宫殿(29-32),幽暗影牢(30-33),诡变之森(30-35),安息之地(30-35),遗迹研究所(32-35),祖灵部落(32-34),雪山试炼(32-34),冰雪猛兽(33-35),冰霜宫殿(34-36),女王史卡姬(35-37),背后之地(36-38),山脊之路(37-39),秘密基地(39-41),邪恶洞窟(41-43),育母基地(43-45),魔炎之地(45-47),邪龙深渊(46-48),迷雾峡谷(47-49),亡灵要塞(48-50),瘟疫之村(49-51),厄运之地(51-53),人取桥之战(55-57),川中岛之战(56-58),越后之龙(57-59),群雄争霸(58-60),远古(遗迹),远古(牛),黑暗之巢(牛),深渊(30),深渊(50~),深渊(55~)",
+               "id" : "guankaditu",
+               "size" : 21,
+               "select" : "1",
+               "width" : 640
+            },
+            {
+               "type" : "ComboBox",
+               "rect" : "629,18,204,58",
+               "list" : "普通    ,冒险    ,勇士    ,王者    ",
+               "id" : "shuatunandu",
+               "size" : 21,
+               "select" : "3",
+               "width" : 640
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,94,20,72",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,94,204,72",
+               "align" : "left",
+               "text" : "通关奖励:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "RadioGroup",
+               "rect" : "260,94,613,72",
+               "list" : "1,2,3,4,随机",
+               "id" : "tongguanjiangli",
+               "size" : 24,
+               "select" : "4",
+               "width" : 640
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,184,20,72",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,184,204,72",
+               "align" : "left",
+               "text" : "黄金卡牌:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "RadioGroup",
+               "rect" : "260,184,715,72",
+               "list" : "1,2,3,4,随机,不选",
+               "id" : "huangjinkapai",
+               "size" : 24,
+               "select" : "4",
+               "width" : 640
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,274,20,72",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,274,204,72",
+               "align" : "left",
+               "text" : "休息时间:",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Edit",
+               "id" : "sleeptime",
+               "text" : "",
+               "width" : 640,
+               "rect" : "260,274,408,58",
+               "color" : "0,0,255",
+               "prompt" : "",
+               "align" : "left",
+               "size" : 21
+            },
+            {
+               "type" : "Label",
+               "rect" : "680,274,51,72",
+               "align" : "left",
+               "text" : "秒",
+               "color" : "0,32,96",
+               "size" : 30
+            }
+         ],
+         "type" : "Page",
+         "style" : "custom",
+         "pr_h" : 72,
+         "pr_y" : 274,
+         "text" : "刷图设置",
+         "init_y" : 274,
+         "pr_x" : 731
+      },
+      {
+         "views" : [
+            {
+               "type" : "Label",
+               "rect" : "12,18,838,28",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,64,20,38",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,64,817,38",
+               "align" : "left",
+               "text" : "欢迎使用，脚本有任何使用问题，请联系作者954343950，群810525278",
+               "color" : "0,32,96",
+               "size" : 24
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,120,20,38",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,120,817,38",
+               "align" : "left",
+               "text" : "◆单角色使用：选择角色-->进入游戏-->开启脚本-->选择功能-->确定",
+               "color" : "230,46,46",
+               "size" : 24
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,176,20,38",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,176,817,38",
+               "align" : "left",
+               "text" : "◆多角色切换：角色列表-->开启脚本-->选择功能和角色序号-->确定",
+               "color" : "230,46,46",
+               "size" : 24
+            },
+            {
+               "type" : "Label",
+               "rect" : "12,232,20,57",
+               "align" : "left",
+               "text" : "",
+               "color" : "0,32,96",
+               "size" : 30
+            },
+            {
+               "type" : "Label",
+               "rect" : "44,232,817,57",
+               "align" : "left",
+               "text" : "角色顺序为第一排从左往右1-4 第二排从左往右5-8",
+               "color" : "0,32,96",
+               "size" : 24
+            }
+         ],
+         "type" : "Page",
+         "style" : "custom",
+         "pr_h" : 57,
+         "pr_y" : 232,
+         "text" : "使用帮助",
+         "init_y" : 232,
+         "pr_x" : 861
       }
-   ]
+   ],
+   "height" : 576,
+   "pr_h" : 0,
+   "cancelname" : "退出",
+   "okname" : "确定"
 }

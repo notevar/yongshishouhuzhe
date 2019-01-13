@@ -56,11 +56,6 @@ end
 				mSleep(500)
 				return;
 			else
-				--				t["IGG1"].openIGGApp();
-				--				if t["IGG1"].isIGG() then
-				--					运行IGG修改器();
-				--				end
-				
 				runCount=runCount+1;
 				showMessage="第"..runCount.."次自动刷图";
 				huds(showMessage.."中..");
@@ -93,7 +88,7 @@ end
 	end
 end
 
-function 自动加速刷图()
+function 自动刷图()
 	isHavePower=1;
 	runCount=0;
 	showMessage="";
@@ -144,11 +139,6 @@ function 自动加速刷图()
 					isHavePower=0;
 					mSleep(500)
 				else
-					--					t["IGG1"].openIGGApp();
-					--					if t["IGG1"].isIGG() then
-					--						运行IGG修改器();
-					--					end
-					
 					runCount=runCount+1;
 					if(userCount ~= 0) then
 						showMessage="第"..userCount.."角色 第"..runCount.."次自动刷图";
@@ -191,34 +181,10 @@ function 自动加速刷图()
 	
 end
 
---运行IGG修改器=function()
---	t["IGG1"].close();
---	t["IGG1"].clear();
---	t["IGG1"].number();
---	t["IGG1"].search(number1);
---	t["IGG1"].open();
---	t["IGG1"].nearby();
---	t["IGG1"].search(number2);
---	t["IGG1"].batch();
---	t["IGG1"].search(number3);
---	t["IGG1"].backGame();
---end
 
-ret,results = ui:show()
-if ret == 0 then lua_exit() end
-
-shuatuLevel=tonumber(results["shuatunandu"])+1;--刷图等级
-jiangliLevel1=tonumber(results["tongguanjiangli"])+1;--奖励1
-jiangliLevel2=tonumber(results["huangjinkapai"])+1;--奖励2
-guanka=tonumber(results["guankaditu"])+1;--关卡信息
-if(results["sleeptime"]~="") then
-	sleeptime=tonumber(results["sleeptime"]) * 1000;
-end
-
-number1=results["number1"];
-number2=results["number2"];--奖励1
-
-if(guanka>=37 and guanka<=42) then
+function 自动切换角色刷图()
+	if(string.find(jueseindex,"0") == 1) then
+		if(guanka>=37 and guanka<=42) then
 	每日地下城();
 	lua_exit();
 else
@@ -226,3 +192,80 @@ else
 	--lockDevice();
 	lua_exit();
 end
+	
+		if(gongnengxuanze=="0")then
+			每日地下城();
+		elseif (gongnengxuanze=="1")then
+			自动加速刷图();
+		elseif(gongnengxuanze=="0@1")then
+			每日地下城();
+			自动加速刷图();
+		else
+			toast("未选择功能，自动退出");
+			mSleep("2000");
+			lua_exit();
+		end
+	else
+		if (t["角色列表"].isUserList()) then
+			for key, value in pairs(userList) do
+				userCount=userCount+1;
+				t["角色列表"].ChangeUser(tonumber(value))
+				mSleep(3000);
+				if(gongnengxuanze=="0")then
+					每日地下城();
+				elseif (gongnengxuanze=="1")then
+					自动加速刷图();
+				elseif(gongnengxuanze=="0@1")then
+					每日地下城();
+					自动加速刷图();
+				else
+					toast("未选择功能，自动退出");
+					mSleep("2000");
+					lua_exit();
+				end
+				--sysLog("自动加速刷图完")
+				huds("切换角色")
+				t["主界面"].goUserList();--返回角色列表
+				--sysLog("返回角色列表")
+				mSleep(3000)
+				while not t["角色列表"].isUserList() do 
+					mSleep(2000);
+				end
+				mSleep(1000)
+			end
+		else
+			toast("请在角色列表界面运行辅助");
+			mSleep(2000)
+			lua_exit();
+		end
+	end
+end
+
+
+ret,results = ui:show()
+--ret,results = showUI("ui.json")
+if ret == 0 then lua_exit() end
+
+shuatuLevel=tonumber(results["shuatunandu"])+1;--刷图等级
+jiangliLevel1=tonumber(results["tongguanjiangli"])+1;--奖励1
+jiangliLevel2=tonumber(results["huangjinkapai"])+1;--奖励2
+guanka=tonumber(results["guankaditu"])+1;--关卡信息
+jueseindex=results["juesexuanze"]  or "";--角色信息
+gongnengxuanze=results["gongnengxuanze"] or "";
+autofuhuo=tonumber(results["zidongfuhuo"]);
+gebuLinLevel=tonumber(results["gebulinnandu"])+1;
+
+if(results["sleeptime"]~="") then
+	sleeptime=tonumber(results["sleeptime"]) * 1000;
+end
+
+userList = Split(jueseindex, "@");
+userCount=0;
+
+if(gongnengxuanze=="")then
+	toast("未选择功能，自动退出");
+	mSleep("1500");
+	lua_exit();
+end
+
+自动切换角色刷图();

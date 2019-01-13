@@ -175,7 +175,7 @@ function huds(text,size,color)
 		size = 22;
 	end
 	color = color or "0xffff0000";
-	showHUD(id,text,size,color,"",0,200,0,300,32)      --显示HUD内容
+	showHUD(id,text,size,color,"",0,200,0,350,32)      --显示HUD内容
 	mSleep(250)
 end
 
