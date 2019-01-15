@@ -4,27 +4,27 @@ ui:new(height,width)
 local p = ui:newPage("功能设置") --另一个页面
 
 p:newLine()
-p:addLebel(8.2,0.6,"") 
+p:addLebel(8.2,0.6,"")
 
 p:newLine()
-p:addLebel(2,1.2,"	 功能选择:") 
-p:addCheckBoxGroup(6,1.2,"gongnengxuanze","1@2@3","自动刷图","斗牛","哥布林") 
+p:addLebel(2,1.2,"	 功能选择:")
+p:addCheckBoxGroup(6,1.2,"gongnengxuanze","1@2@3","自动刷图","斗牛","哥布林")
 
 p:newLine()
-p:addLebel(2,1.2,"    哥布林难度:") 
-p:addRadioBoxGroup(4,1.2,"gebulinnandu","0","普通  ","冒险  ","勇士  ") 
+p:addLebel(2,1.2,"    哥布林难度:")
+p:addRadioBoxGroup(4,1.2,"gebulinnandu","0","普通  ","冒险  ","勇士  ")
 
-p:newLine() 
-p:addLebel(2,1.2,"	 自动复活:") 
+p:newLine()
+p:addLebel(2,1.2,"	 自动复活:")
 p:addRadioBoxGroup(4,1.2,"zidongfuhuo","0","关闭  ","开启  ")  --单选框
 
 p:newLine()
-p:addLebel(2,1.2,"	 选择角色:") 
+p:addLebel(2,1.2,"	 选择角色:")
 p:addCheckBoxGroup(7,1.2,"juesexuanze","1","1","2","3","4","5","6","7","8")  --编辑框
 
 local p = ui:newPage("刷图设置") --页面标题
 p:newLine()
-p:addLebel(8.2,0.6,"") 
+p:addLebel(8.2,0.6,"")
 
 p:newLine()  --换行
 p:addLebel(2,1.5,"	 刷图位置:")   		 --文字标签
@@ -37,25 +37,25 @@ p:addLebel(2,1.2,"	 通关奖励:")  --文字标签
 p:addRadioBoxGroup(6,1.2,"tongguanjiangli","4","1","2","3","4","随机")
 
 p:newLine()
-p:addLebel(2,1.2,"	 黄金卡牌:") 
+p:addLebel(2,1.2,"	 黄金卡牌:")
 p:addRadioBoxGroup(7,1.2,"huangjinkapai","4","1","2","3","4","随机","不选")
 
 p:newLine()
-p:addLebel(2,1.4,"	 休息时间:") 
+p:addLebel(2,1.4,"	 休息时间:")
 p:addEdit(3,1.4,"sleeptime","")  --编辑框
 p:addLebel(0.5,1.2,"秒")
 
 local p = ui:newPage("使用帮助") --页面标题
 p:newLine()
-p:addLebel(8.2,0.6,"") 
+p:addLebel(8.5,0.6,"")
 
 p:newLine()
-p:addLebel(8,0.8,"	欢迎使用，脚本有任何使用问题，请联系作者954343950，群810525278",24,"left") 
+p:addLebel(8.5,0.8,"	欢迎使用，脚本有任何使用问题，请联系作者954343950，群810525278",24,"left")
 p:newLine()
-p:addLebel(8,0.8,"	◆单角色使用：选择角色-->进入游戏-->开启脚本-->选择功能-->确定",24,"left","230,46,46") 
+p:addLebel(8.5,0.8,"	◆单角色使用：选择角色-->进入游戏-->开启脚本-->选择功能-->确定",24,"left","230,46,46")
 p:newLine()
-p:addLebel(8,0.8,"	◆多角色切换：角色列表-->开启脚本-->选择功能和角色序号 -->确定",24,"left","230,46,46") 
+p:addLebel(8.5,0.8,"	◆多角色切换：角色列表-->开启脚本-->选择功能和角色序号 -->确定",24,"left","230,46,46")
 
 p:newLine()
-p:addLebel(8,1.2,"	角色顺序为第一排从左往右1-4 第二排从左往右5-8",24) 
+p:addLebel(8.5,1.2,"	角色顺序为第一排从左往右1-4 第二排从左往右5-8",24)
 

@@ -12,6 +12,62 @@ else
 	lua_exit()
 end
 
+每日地下城1=function()
+	while true do
+		if t.isLoading() then
+			sysLog("isLoading");
+			mSleep(1500);
+		elseif t["主界面"].isFind() then
+			huds("打开日常..");
+			--sysLog("isFind");
+			t["每日地下城"].OpenRiChang();
+			mSleep(500);
+			if not t["每日地下城"].isFindRiChang() then
+				break;
+			end
+		elseif t["每日地下城"].isComplate() then
+			mSleep(2000);
+		elseif t["每日地下城"].isFindRiChang() then
+			t["每日地下城"].changeDXC();
+			--sysLog("isFindRiChang");
+			if t["每日地下城"].isFindGBL() then
+				huds("哥布林..");
+				t["每日地下城"].GebuLin()
+				mSleep(1000)
+			elseif t["每日地下城"].isDouNiu() then
+				huds("斗牛..");
+				t["每日地下城"].DouNiu()
+				mSleep(1000)
+			elseif not t["每日地下城"].isFindGBL() and not t["每日地下城"].isDouNiu() then
+				huds("已完成每日地下城");
+				--sysLog("yyyyyyy ");
+				t.back();
+				break;
+			else
+				--sysLog("yyyyyyy ");
+				t.back();
+				mSleep(1000)
+			end
+		elseif t["刷图"].isFightIng() then--isCheckAutoFight==0 and
+			mSleep(2000)
+		elseif t["刷图"].IsDead() then
+			if(autofuhuo==1)then
+				huds("自动复活");
+				t["刷图"].fuHuo();
+			else
+				mSleep(4000)
+			end
+		elseif t.closePopup() then
+			mSleep(500)
+		else
+			--sysLog("no ");
+			--t.back();
+			mSleep(500);
+		end
+	end
+end
+
+
 每日地下城=function()
 	isHavePower=1;
 	runCount=0;
@@ -80,8 +136,6 @@ end
 			mSleep(2000)
 		elseif t.closePopup() then
 			mSleep(500)
-			--		elseif t["IGG1"].isIGG() then
-			--			运行IGG修改器();
 		else
 			mSleep(150);
 		end
@@ -171,8 +225,6 @@ function 自动刷图()
 			--mSleep(500)
 		elseif isHavePower == 1 and t.closePopup() then
 			mSleep(150)
-		elseif t["IGG1"].isIGG() then
-			运行IGG修改器();
 		else
 			--t.back();
 			mSleep(150);
@@ -185,14 +237,14 @@ end
 function 自动切换角色刷图()
 	if(string.find(jueseindex,"0") == 1) then
 		if(guanka>=37 and guanka<=42) then
-	每日地下城();
-	lua_exit();
-else
-	自动加速刷图();
-	--lockDevice();
-	lua_exit();
-end
-	
+			每日地下城();
+			lua_exit();
+		else
+			自动加速刷图();
+			--lockDevice();
+			lua_exit();
+		end
+		
 		if(gongnengxuanze=="0")then
 			每日地下城();
 		elseif (gongnengxuanze=="1")then
@@ -228,7 +280,7 @@ end
 				t["主界面"].goUserList();--返回角色列表
 				--sysLog("返回角色列表")
 				mSleep(3000)
-				while not t["角色列表"].isUserList() do 
+				while not t["角色列表"].isUserList() do
 					mSleep(2000);
 				end
 				mSleep(1000)
